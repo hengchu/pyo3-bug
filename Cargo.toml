@@ -6,7 +6,11 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "pyo3_bug"
+crate-type = ["cdylib"]
+
 [dependencies]
 
 [dependencies.pyo3]
-git = "https://github.com/PyO3/pyo3.git"
+path = '../pyo3'
