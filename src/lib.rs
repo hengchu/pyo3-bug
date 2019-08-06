@@ -13,7 +13,7 @@ fn say_hello(_py: Python, _foobar: &FooBar) -> PyResult<String> {
 #[pymodule]
 fn pyo3_bug(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<FooBar>().unwrap();
-    m.add_wrapped(wrap_pyfunction!(say_hello));
+    m.add_wrapped(wrap_pyfunction!(say_hello)).unwrap();
     Ok(())
 }
 
