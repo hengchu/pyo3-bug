@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["hengchu <hengchu.zhang@gmail.com>"]
 edition = "2018"
 
+[lib]
+name = "pyo3_bug"
+crate-type = ["cdylib"]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
@@ -13,4 +17,5 @@ crate-type = ["cdylib"]
 [dependencies]
 
 [dependencies.pyo3]
-path = '../pyo3'
+git = "https://github.com/PyO3/pyo3.git"
+rev = "98b707918315e2db3a90ea953177b20a5cdeff49"
